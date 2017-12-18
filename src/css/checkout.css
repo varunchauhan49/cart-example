@@ -1,0 +1,202 @@
+table {
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  table-layout: fixed;
+}
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+table thead tr {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: .35em;
+}
+table tbody tr {
+  padding: .35em;
+}
+
+tr .box{
+  border: 1px solid #ddd;
+}
+table th{
+  padding: .625em;
+  text-align: left;
+}
+table td {
+  text-align: left;
+  padding: 0 .625em 0 .625em;
+}
+
+td .cancel{
+  margin-top: 12px;
+  float: right;
+}
+
+td .item-name{
+  
+}
+
+table td img{
+  width: 30px;
+  height: 30px;
+  padding: 5px 15px 3px 0px;
+  display: inline-block;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+  table caption {
+    font-size: 1.3em;
+  }
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  table td:before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+.checkout{
+  display: flex;
+}
+
+.checkout .tittle{
+  margin-top: 10px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.header{
+  font-size: 22px;
+  font-weight: 100;
+  margin: 20px;
+}
+
+.checkout .bill{
+  border: 1px solid;
+  height: 160px;
+  width: 300px;
+  margin-left: 3%;
+}
+.bill .item{
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.bill .discount{
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.bill .type{
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.bill .total{
+  margin-top: 10px;
+  padding: 10px;
+  background: #efefef;
+}
+
+.toastify--top-right {
+  top: 1em;
+  right: 1em;
+}
+
+.toastify {
+  z-index: 1;
+  position: fixed;
+  padding: 4px;
+  width: 320px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.toastify-content--success {
+  background: #3498db;;
+}
+
+.toastify-content {
+  position: relative;
+  min-height: 48px;
+  margin-bottom: 1rem;
+  padding: 8px;
+  border-radius: 1px;
+  -webkit-box-shadow: 0 1px 10px 0 rgba(0,0,0,.1), 0 2px 15px 0 rgba(0,0,0,.05);
+  box-shadow: 0 1px 10px 0 rgba(0,0,0,.1), 0 2px 15px 0 rgba(0,0,0,.05);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-height: 800px;
+  overflow: hidden;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.toastify-animated {
+  -webkit-animation-duration: .75s;
+  animation-duration: .75s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.toastify__body {
+  margin: auto 0;
+  -ms-flex: 1;
+  flex: 1 1;
+}
+
+.toastify__close {
+  padding: 0;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  opacity: .7;
+  -webkit-transition: .3s ease;
+  -o-transition: .3s ease;
+  transition: .3s ease;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
